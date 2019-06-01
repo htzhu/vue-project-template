@@ -1,5 +1,5 @@
 <template>
-  <div class="iconfont">&#xe603;</div>
+  <div class="iconfont iconicon-test"></div>
 </template>
 
 <script>
@@ -14,5 +14,7 @@ export default {
 <style scoped>
 .iconfont {
   font-size: 48px;
+  text-align: center;
+  margin-top: 100px;
 }
 </style>

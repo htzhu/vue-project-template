@@ -1,0 +1,25 @@
+.foldSpanClass {
+  font-size: 20px;
+  height: 45px;
+  line-height: 50px;
+  cursor: pointer;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  /* border-bottom: 2px solid #9ea7b4;
+  border-top: 2px solid #9ea7b4; */
+}
+/* .foldSpanClass:hover {
+  background-color: rgb(49, 55, 67, 0.7) !important;
+} */
+.el-menu:not(.el-menu--collapse) {
+  width: 240px;
+  min-height: 400px;
+}
+i.iconfont {
+  margin-right: 6px;
+}
+.el-container>ul>li{
+  /* border-bottom: 1px solid #657180; */
+  border-bottom: 1px solid #313743;
+}

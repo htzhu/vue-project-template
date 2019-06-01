@@ -1,0 +1,35 @@
+.home-container {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  overflow-x: auto;
+  min-width: 1024px;
+}
+.el-header {
+  background-color: #212529;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+}
+.el-main {
+  background-color: #fff;
+  text-align: center;
+}
+.home-header-row {
+  margin-bottom: 20px;
+  color: #fff;
+  height: 100%;
+  &: last-child {
+    margin-bottom: 0;
+  }
+}
+.project-iconfont,
+.project-name {
+  font-size: 24px;
+  color: #fff;
+}
+.project-name {
+  margin-left: 6px;
+}
