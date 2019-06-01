@@ -1,3 +1,7 @@
 @import url('./common/reset.css');
 
 @import url('./common/iconfont.css');
+
+/* 自定义 element-ui 主题 */
+@import url('./theme.css');
+@import url('./theme.scss');

@@ -6,8 +6,13 @@ import { Message } from 'element-ui';
  */
 axios.interceptors.request.use(
   config => {
-    // config.headers.Authorization = '';
-
+    //设置单点登录成功后的重定向地址
+    config.headers.Redirect = sessionStorage.getItem('callbackUrl');
+    if (sessionStorage.getItem('authKey') != null) {
+      config.headers.Authorization = 'TYDIC_AUTH auth_key=' + sessionStorage.getItem('authKey') + ';from=109';
+    } else {
+      config.headers.Authorization = '';
+    }
     return config;
   },
   err => {
@@ -27,11 +32,11 @@ axios.interceptors.response.use(
   },
   err => {
     if (err.response.status == 504 || err.response.status == 404) {
-      Message.error({ message: '服务器不存在⊙﹏⊙∥' });
+      Message.error({ message: '服务器不存在！' });
     } else if (err.response.status == 403) {
-      Message.error({ message: '权限不足,请联系管理员!' });
+      Message.error({ message: '权限不足,请联系管理员！' });
     } else {
-      Message.error({ message: '未知错误，请求联系管理员!' });
+      Message.error({ message: '未知错误，请求联系管理员！' });
     }
     return Promise.reject(err);
   }
